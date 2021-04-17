@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "72326220319",
+    "project_id": "lamechproject",
+    "storage_bucket": "lamechproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:72326220319:android:0dd940a429a08322ce232a",
+        "android_client_info": {
+          "package_name": "com.example.communityreport"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "72326220319-ke167kvk876pfc7h75lfn8dv536eqss3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.communityreport",
+            "certificate_hash": "40d97dd7652cb6ce70b47699eaf3368cfc6a77c2"
+          }
+        },
+        {
+          "client_id": "72326220319-127ebgmd4mkf0fdjhv2nncph46jb70el.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADgwxvaaVTfuSKuLCiMThKIrrZms0yZj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "72326220319-127ebgmd4mkf0fdjhv2nncph46jb70el.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
