@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(i)
 
             } else {
-                Toast.makeText(this,"Enter 9 digit mobile number",Toast.LENGTH_LONG)
+                Toast.makeText(this,"Enter mobile number (without 0)",Toast.LENGTH_LONG)
                     .show()
             }
         }
