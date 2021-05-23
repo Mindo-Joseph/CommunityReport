@@ -25,6 +25,7 @@ import java.util.*
 class Success : AppCompatActivity() {
 
     var placesClient: PlacesClient? = null
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_success)
