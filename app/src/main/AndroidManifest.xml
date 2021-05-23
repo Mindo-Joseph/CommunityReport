@@ -12,7 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CommunityReport">
-        <activity android:name=".Success"></activity>
+        <activity
+            android:name=".Success"
+            android:exported="true"
+            ></activity>
         <activity android:name=".OTPvalidation" />
         <activity android:name=".MainActivity">
             <intent-filter>
