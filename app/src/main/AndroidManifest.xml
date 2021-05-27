@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CommunityReport">
-        <activity android:name=".UploadSuccess"></activity>
+        <activity android:name=".ShowActivity"></activity>
+        <activity android:name=".show" />
+        <activity android:name=".UploadSuccess" />
         <activity
             android:name=".Success"
             android:exported="true" />
