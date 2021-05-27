@@ -11,15 +11,7 @@ class UploadSuccess : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_upload_success)
-        showBtn = findViewById(R.id.button2)
 
-        showBtn?.setOnClickListener {
-            val intent = Intent(this, ShowActivity::class.java)
-
-
-
-            startActivity(intent)
-        }
     }
 
 
