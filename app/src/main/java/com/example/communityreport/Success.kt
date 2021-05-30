@@ -220,9 +220,10 @@ class Success : AppCompatActivity() {
     private fun uploadToFirebase(uri: Uri) {
         val fileRef =
             reference.child(System.currentTimeMillis().toString() + "." + getFileExtension(uri))
+        val imageDescription = photoDescription?.getText().toString().trim();
         fileRef.putFile(uri).addOnSuccessListener {
             fileRef.downloadUrl.addOnSuccessListener { uri ->
-                val model = Model(uri.toString())
+                val model = Model(uri.toString(),imageDescription)
                 val modelId = root.push().key
                 root.child(modelId!!).setValue(model)
 
