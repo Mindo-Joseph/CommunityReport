@@ -39,7 +39,7 @@ class Success : AppCompatActivity() {
     var placesClient: PlacesClient? = null
 
     private lateinit var fusedLocationClient: FusedLocationProviderClient
-    var lastDeviceLocation: Location? = null
+    var lastDeviceLocation: String? = null
 
     //Get a reference to the database, so your app can perform read and write operations
     val database: FirebaseDatabase = FirebaseDatabase.getInstance()
@@ -188,7 +188,10 @@ class Success : AppCompatActivity() {
 
 
                 if (location != null) {
-                    lastDeviceLocation = location
+                    val latitude = location.latitude.toString()
+                    val longitude = location.longitude.toString()
+                    lastDeviceLocation = latitude + longitude
+                    Log.e(TAG,lastDeviceLocation)
                 } else {
                     // if location is null , log an error message
 
