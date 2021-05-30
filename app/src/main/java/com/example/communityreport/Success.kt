@@ -4,6 +4,7 @@ package com.example.communityreport
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
+import android.location.Location
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -38,6 +39,7 @@ class Success : AppCompatActivity() {
     var placesClient: PlacesClient? = null
 
     private lateinit var fusedLocationClient: FusedLocationProviderClient
+    var lastDeviceLocation: Location? = null
 
     //Get a reference to the database, so your app can perform read and write operations
     val database: FirebaseDatabase = FirebaseDatabase.getInstance()
@@ -184,9 +186,9 @@ class Success : AppCompatActivity() {
                 val location = it.result //obtain location
 
 
-                val ref: DatabaseReference = database.getReference("locations")
+
                 if (location != null) {
-                    ref.setValue(location)
+                    lastDeviceLocation = location
                 } else {
                     // if location is null , log an error message
 
@@ -220,9 +222,10 @@ class Success : AppCompatActivity() {
     private fun uploadToFirebase(uri: Uri) {
         val fileRef =
             reference.child(System.currentTimeMillis().toString() + "." + getFileExtension(uri))
+        val imageDescription = photoDescription?.getText().toString().trim();
         fileRef.putFile(uri).addOnSuccessListener {
             fileRef.downloadUrl.addOnSuccessListener { uri ->
-                val model = Model(uri.toString())
+                val model = Model(uri.toString(),imageDescription,lastDeviceLocation)
                 val modelId = root.push().key
                 root.child(modelId!!).setValue(model)
 
